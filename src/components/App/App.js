@@ -8,7 +8,7 @@ function App() {
   const [cityWeather, setCityWeather] = useState("");
 
   const fetchCityWeather = () => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=6639f695e3fec3d48b82d60b01794e8e`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=6639f695e3fec3d48b82d60b01794e8e`,{method: "POST"})
     .then(response => response.json())
     .then(data => {
       // console.log(data);
